@@ -11,7 +11,7 @@ function Footer() {
                 </ul>
 
                 <ul className="flex flex-col gap-5 sm:flex-row">
-                    <li className="transition  hover:text-zinc-100 hover:underline"><a href="">Portofolio</a></li>
+                    <li className="transition  hover:text-zinc-100 hover:underline"><Link to="/wallet">Portofolio</Link></li>
                     <li className="transition  hover:text-zinc-100 hover:underline"><a href="">Wiki</a></li>
                 </ul>
             </div>

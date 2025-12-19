@@ -8,6 +8,7 @@ import CreateBlog from "./CreateBlog";
 import { BlogDetail } from "./BlogDetail";
 import HeaderBlog from "./BlogLayout";
 import BlogLayout from "./BlogLayout";
+import Wallet from "./wallet";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
                 <Route path="/blogs/:id" element={<BlogDetail />} />
                 <Route path="/blogs/create" element={<CreateBlog />} />
               </Route>
-
+              <Route path="/wallet" element={<Wallet />} />
             </Routes>
             {/* <Blog /> */}
             {/* <Button /> */}
