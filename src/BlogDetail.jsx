@@ -10,7 +10,7 @@ export function BlogDetail() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await (await fetch(`http://localhost:8080/api/v1/blogs/${id}`)).json()
+                const response = await (await fetch(`http://localhost:8080/api/blogs/${id}`)).json()
                 setBlog(response.data)
             } catch (error) {
                 setErr(error)

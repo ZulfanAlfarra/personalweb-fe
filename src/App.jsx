@@ -6,6 +6,8 @@ import Button from "./Button"
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import CreateBlog from "./CreateBlog";
 import { BlogDetail } from "./BlogDetail";
+import HeaderBlog from "./BlogLayout";
+import BlogLayout from "./BlogLayout";
 
 function App() {
   return (
@@ -15,9 +17,12 @@ function App() {
           <div className="p-6 sm:p-0 max-w-3xl mx-auto">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/blogs/:id" element={<BlogDetail />} />
-              <Route path="/blogs/create" element={<CreateBlog />} />
+              <Route element={<BlogLayout />}>
+                <Route path="/blogs" element={<Blogs />} />
+                <Route path="/blogs/:id" element={<BlogDetail />} />
+                <Route path="/blogs/create" element={<CreateBlog />} />
+              </Route>
+
             </Routes>
             {/* <Blog /> */}
             {/* <Button /> */}

@@ -9,7 +9,7 @@ function Home() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await (await fetch("http://localhost:8080/api/v1/blogs/summary/home")).json();
+                const response = await (await fetch("http://localhost:8080/api/blogs/summary/home")).json();
                 setBlogs(response.data)
             } catch (error) {
                 setErr(error)
@@ -79,7 +79,7 @@ function Home() {
                         <div key={index} className="relative pl-6">
                             <p className="absolute left-0 top-2  w-[9px] h-[9px] bg-white rounded-full"></p>
                             <p className="text-base text-gray-100 font-medium">{new Intl.DateTimeFormat("id-ID", { dateStyle: "medium" }).format(new Date(blog.createdAt))}</p>
-                            <h3 className="text-lg font-bold my-1 sm:text-xl hover:underline"><Link to={`/blogs/${blog.id}`}>{blog.title}</Link></h3>
+                            <h3 className="text-lg font-bold my-1 sm:text-xl hover:underline decoration-2"><Link to={`/blogs/${blog.id}`}>{blog.title}</Link></h3>
                             <p className="text-sm text-gray-400">{blog.description.length > 150 ? blog.description.slice(0, 150) + "..." : blog.description}</p>
                         </div>
                     ))}
